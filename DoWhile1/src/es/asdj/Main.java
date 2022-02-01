@@ -8,11 +8,10 @@ public class Main {
         int numero;
         Scanner entrada = new Scanner(System.in);
 
-        System.out.print("Dame un número: ");
-        numero = entrada.nextInt();
+	    do  {
+            System.out.print("Dame un número positivo: ");
+            numero = entrada.nextInt();
+        } while (numero <= 0 );
 
-        for (int i = 1; i <= numero ; i += 2) {
-            System.out.println(i);
-        }
     }
 }
