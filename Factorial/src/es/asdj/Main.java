@@ -14,6 +14,6 @@ public class Main {
         for(int i = 1; i <= n; i++) {
             num = num * i ;
         }
-        System.out.println(num);
+        System.out.print(num);
     }
 }
