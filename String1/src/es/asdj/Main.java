@@ -6,16 +6,24 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        String l, letra;
+        String texto;
+        int contador = 0;
 
-        l = entrada.nextLine();
+        System.out.print("Escribe un texto: ");
+        texto = entrada.nextLine();
         System.out.print("Intenta adivinar una letra del texto: ");
-        letra = entrada.nextLine();
+        char letra = entrada.nextLine().charAt(0);
 
-        for (int i = 0; i < l.length ; i++) {
-            if (letra = l.charAt(i)) {
-
+        for (int i = 0; i < texto.length(); i++) {
+            if (letra == texto.charAt(i)) {
+                contador++;
             }
+        }
+
+        if (contador == 0){
+            System.out.println("La letra " + letra + " no está en el texto: " + texto);
+        } else {
+            System.out.println("La letra " + letra + "  está en el texto: " + texto + " y aparece " + contador + " veces");
         }
     }
 }
